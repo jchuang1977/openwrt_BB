@@ -148,6 +148,17 @@ define MkuImageOKLI
 endef
 endif
 
+# Andy add wndr3700v2 compile log 
+#  wndr3700v2 will call below 
+#  $(call CatFiles,    $(KDIR_TMP)/vmlinux-$(2).uImage.squashfs,   0,   $(KDIR)/root.$(1),   $(fwsize),   $(call sysupname,$(1),$(2)),    64)
+#  (1) /home/andy/openwrt_BB/build_dir/target-mips_34kc_uClibc-0.9.33.2/linux-ar71xx_generic/tmp/vmlinux-wndr3700v2.uImage.squashfs
+#  (2)  0
+#  (3)  /home/andy/openwrt_BB/build_dir/target-mips_34kc_uClibc-0.9.33.2/linux-ar71xx_generic/root.squashfs-raw
+#  (4)  16252928 
+#  (5) /home/andy/openwrt_BB/bin/ar71xx/openwrt-ar71xx-generic-wndr3700v2-squashfs-sysupgrade.bin
+#  (6) 64
+
+
 # $(1): name of the 1st file.
 # $(2): size limit of the 1st file if it is greater than 262144, or
 #       the erase size of the flash if it is greater than zero and less
